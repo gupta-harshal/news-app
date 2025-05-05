@@ -5,12 +5,12 @@ import { summaryState } from "../atoms/summaryAtom";
 import { useNavigate } from "react-router-dom";
 
 export default function ArticleCard({ article }) {
-  const [loading, setLoading] = useState(false);  // Loading state
+  const [loading, setLoading] = useState(false); 
   const setSummary = useSetRecoilState(summaryState);
   const navigate = useNavigate();
 
   const handleClick = async () => {
-    setLoading(true);  // Show loading text
+    setLoading(true);  
 
     try {
       const response = await axios.post("http://localhost:3000/news/v1/article/", {
@@ -30,7 +30,7 @@ export default function ArticleCard({ article }) {
         console.log('Error response:', err.response); 
       }
     } finally {
-      setLoading(false);  // Hide loading text after request completes
+      setLoading(false);  
     }
   };
 
@@ -42,7 +42,6 @@ export default function ArticleCard({ article }) {
       <div>
         {loading ? (
           <div className="flex justify-center items-center">
-            {/* Plain text loading */}
             <span>Loading...</span>
           </div>
         ) : (
