@@ -1,5 +1,7 @@
 # News Generating App
 
+### The Backend response time might be slow as it is deployed on a free service called rendered wheras the frontend is deployed on vercel.
+
 In this appliacation my approach is to send the content from the json file to the backend and that will send it to the gemini-model to generate a summary of 50 words as i have sent it in the respone.
 The color palette of the website is picked from the colorhunt website and the UI is made by me. I have structured the code in such a way that further adaptions to the application can me made easily according to the demands of the user or the company.
 
