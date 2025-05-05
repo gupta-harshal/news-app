@@ -13,7 +13,7 @@ export default function ArticleCard({ article }) {
     setLoading(true);  
 
     try {
-      const response = await axios.post("http://localhost:3000/news/v1/article/", {
+      const response = await axios.post("https://news-app-hcnb.onrender.com/news/v1/article/", {
         content: article.content,
       }, {
         headers: {
